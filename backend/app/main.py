@@ -141,7 +141,7 @@ All endpoints (except `/api/auth/register` and `/api/auth/login`) require a **Be
             "version": settings.app_version,
         }
 
-    @app.get("/", tags=["Health"], include_in_schema=False)
+    @app.get("/api", tags=["Health"], include_in_schema=False)
     async def root() -> dict:
         return {
             "message": f"Welcome to {settings.app_name} API",
